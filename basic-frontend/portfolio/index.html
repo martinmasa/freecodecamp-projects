@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>mtendotnet - portfolio</title>
+
+    <title>@mtendotnet - portfolio</title>
 
     <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -17,14 +17,30 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!--
-      https://40.media.tumblr.com/1b916597d3e174399cb7adadddb66ede/tumblr_nt5uk4psl31ud7rr3o1_1280.jpg
-      https://41.media.tumblr.com/eb2382a5a4c996cfdab27bc0d1eb51ff/tumblr_nt5umxS1FY1ud7rr3o1_1280.jpg
-      https://41.media.tumblr.com/92e61775d4c3edcc5145936e3703d125/tumblr_nt5uo9fH9y1ud7rr3o1_1280.jpg
-      https://41.media.tumblr.com/ac46aa24b44b5036e9200abb71f810d9/tumblr_nt5vzxV6Us1ud7rr3o1_1280.jpg
-     -->
     <style type="text/css">
+      .page-section {
+        border: 1px solid green;
+        min-height: 800px;
+        padding-top: 100px;
+        background: no-repeat center center fixed;
+        background-size: cover;
+      }
 
+      #intro-section {
+        background-image: url("https://40.media.tumblr.com/1b916597d3e174399cb7adadddb66ede/tumblr_nt5uk4psl31ud7rr3o1_1280.jpg");
+      }
+
+      #about-section {
+        background-image: url("https://41.media.tumblr.com/eb2382a5a4c996cfdab27bc0d1eb51ff/tumblr_nt5umxS1FY1ud7rr3o1_1280.jpg");
+      }
+
+      #portfolio-section {
+        background-image: url("https://41.media.tumblr.com/92e61775d4c3edcc5145936e3703d125/tumblr_nt5uo9fH9y1ud7rr3o1_1280.jpg");
+      }
+
+      #contact-section {
+        background-image: url("https://41.media.tumblr.com/ac46aa24b44b5036e9200abb71f810d9/tumblr_nt5vzxV6Us1ud7rr3o1_1280.jpg");
+      }
     </style>
   </head>
   <body>
@@ -41,22 +57,22 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#home">mtendotnet</a>
+            <a class="navbar-brand" href="#home">@mtendotnet</a>
           </div>
 
           <div id="main-nav-collapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
               <li class="active">
-                <a href="#home">Home</a>
+                <a href="#intro-section">Home</a>
               </li>
               <li>
-                <a href="#about">About</a>
+                <a href="#about-section">About</a>
               </li>
               <li>
-                <a href="#about">Portfolio</a>
+                <a href="#portfolio-section">Portfolio</a>
               </li>
               <li>
-                <a href="#about">Contact</a>
+                <a href="#contact-section">Contact</a>
               </li>
             </ul>
           </div>
@@ -66,28 +82,106 @@
     </header>
 
     <section id="intro-section" class="page-section">
-      <div class="container">
-
+      <div class="container text-center col-md-12">
+          <h1 class="">mtendotnet</h1>
+          <p class="lead">FreeCodeCamp Portfolio Front End Project</p>
+          <a href="http://twitter.com/mtendotnet" class="btn btn-default" target="_blank">Twitter</a>
+          <a href="http://github.com/mtendotnet" class="btn btn-default" target="_blank">Github</a>
+          <a href="https://uk.linkedin.com/in/masa255" class="btn btn-default" target="_blank">LinkedIn</a>
+          <a href="http://freecodecamp.com/mtendotnet" class="btn btn-default" target="_blank">FreeCodeCamp</a>
       </div>
     </section>
 
     <section id="about-section" class="page-section">
       <div class="container">
-
+        <div class="row">
+          <div class="col-md-6 col-lg-6">
+            <h1>About</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+            text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+            survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised
+            in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+            like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </div>
+          <div class="col-md-6 col-lg-6">
+            <img src="http://placehold.it/350x350" class="img-responsive img-circle" alt="mtendotnet image">
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="portfolio-section" class="page-section">
       <div class="container">
-
+        <h1>Portfolio</h1>
+        <div class="row">
+          <div class="col-md-4 col-lg-4">
+            <img src="http://placehold.it/350x150" class="img-responsive" alt="Project 6 Image">
+            <h3>Project 1</h3>
+            <p>Project 1 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+            text ever since the 1500s</p>
+          </div>
+          <div class="col-md-4 col-lg-4">
+            <img src="http://placehold.it/350x150" class="img-responsive" alt="Project 2 Image">
+            <h3>Project 2</h3>
+            <p>Project 2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+            text ever since the 1500s</p>
+          </div>
+          <div class="col-md-4 col-lg-4">
+            <img src="http://placehold.it/350x150" class="img-responsive" alt="Project 3 Image">
+            <h3>Project 3</h3>
+            <p>Project 3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+            text ever since the 1500s</p>
+          </div>
+          <div class="col-md-4 col-lg-4">
+            <img src="http://placehold.it/350x150" class="img-responsive" alt="Project 4 Image">
+            <h3>Project 4</h3>
+            <p>Project 4 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+            text ever since the 1500s</p>
+          </div>
+          <div class="col-md-4 col-lg-4">
+            <img src="http://placehold.it/350x150" class="img-responsive" alt="Project 5 Image">
+            <h3>Project 5</h3>
+            <p>Project 5 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+            text ever since the 1500s</p>
+          </div>
+          <div class="col-md-4 col-lg-4">
+            <img src="http://placehold.it/350x150" class="img-responsive" alt="Project 6 Image">
+            <h3>Project 6</h3>
+            <p>Project 6 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+            text ever since the 1500s</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="contact-section" class="page-section">
       <div class="container">
+        <div class="row">
+          <div class="col-md-9 col-lg-9">
+            <h1>Connect with Martin</h1>
+          </div>
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <p><a href="http://twitter.com/mtendotnet" class="btn btn-default" target="_blank">Twitter</a></p>
+            <p><a href="http://github.com/mtendotnet" class="btn btn-default" target="_blank">Github</a></p>
+            <p><a href="https://uk.linkedin.com/in/masa255" class="btn btn-default" target="_blank">LinkedIn</a></p>
+            <p><a href="http://freecodecamp.com/mtendotnet" class="btn btn-default" target="_blank">FreeCodeCamp</a></p>
+          </div>
+        </div>
 
       </div>
     </section>
+
+    <footer>
+      <div class="container">
+        <p>
+          <a href="#intro-section">Home</a> &middot;
+          <a href="#about-section">About</a> &middot;
+          <a href="#portfolio-section">Portfolio</a> &middot;
+          <a href="#contact-section">Contact</a>
+        </p>
+        <p>&copy; Copyright @mtendotnet 2015. All Rights Reserved</p>
+      </div>
+    </footer>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -96,9 +190,16 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
 
     <script type="text/javascript">
-        $(document).ready(function () {
 
-        });
+        (function (window, $) {
+
+          $(document).ready(function () {
+            $("#main-nav-collapse a, footer a").on('click', function (e) {
+              $.scrollTo($(this).attr('href'), 250);
+            });
+          });
+
+        })(window, jQuery);
     </script>
   </body>
 </html>
