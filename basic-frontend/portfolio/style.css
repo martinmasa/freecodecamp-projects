@@ -1,0 +1,39 @@
+.page-section {
+  min-height: 800px;
+  background: no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+h1 {
+  font-size: 4em;
+  color: #555;
+}
+
+.page-section > .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#intro {
+  background-image: url("img/bcg_slide-1.jpg");
+}
+
+#about {
+  background-image: url("img/bcg_slide-2.jpg");
+}
+
+#portfolio {
+  background-image: url("img/bcg_slide-3.jpg");
+}
+
+#contact {
+  background-image: url("img/bcg_slide-1.jpg");
+}
+
+footer {
+  height: 150px;
+  padding-top: 50px;
+}

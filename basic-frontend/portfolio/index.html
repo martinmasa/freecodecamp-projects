@@ -17,47 +17,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <style type="text/css">
-      .page-section {
-        min-height: 800px;
-        background: no-repeat center center fixed;
-        background-size: cover;
-        position: relative;
-      }
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
 
-      h1 {
-        font-size: 4em;
-        color: #555;
-      }
-
-      .page-section > .container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-      }
-
-      #intro {
-        background-image: url("img/bcg_slide-1.jpg");
-      }
-
-      #about {
-        background-image: url("img/bcg_slide-2.jpg");
-      }
-
-      #portfolio {
-        background-image: url("img/bcg_slide-3.jpg");
-      }
-
-      #contact {
-        background-image: url("img/bcg_slide-1.jpg");
-      }
-
-      footer {
-        height: 150px;
-        padding-top: 50px;
-      }
-    </style>
   </head>
   <body>
 
@@ -244,17 +205,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
 
-    <script type="text/javascript">
-
-        (function (window, $) {
-
-          $(document).ready(function () {
-            $("#main-nav-collapse a, footer a").on('click', function (e) {
-              $.scrollTo($(this).attr('href'), 250);
-            });
-          });
-
-        })(window, jQuery);
-    </script>
+    <script src="main.js" charset="utf-8"></script>
   </body>
 </html>
