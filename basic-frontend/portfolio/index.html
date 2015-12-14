@@ -19,27 +19,43 @@
 
     <style type="text/css">
       .page-section {
-        border: 1px solid green;
         min-height: 800px;
-        padding-top: 100px;
         background: no-repeat center center fixed;
         background-size: cover;
+        position: relative;
       }
 
-      #intro-section {
+      h1 {
+        font-size: 4em;
+        color: #555;
+      }
+
+      .page-section > .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      #intro {
         background-image: url("https://40.media.tumblr.com/1b916597d3e174399cb7adadddb66ede/tumblr_nt5uk4psl31ud7rr3o1_1280.jpg");
       }
 
-      #about-section {
+      #about {
         background-image: url("https://41.media.tumblr.com/eb2382a5a4c996cfdab27bc0d1eb51ff/tumblr_nt5umxS1FY1ud7rr3o1_1280.jpg");
       }
 
-      #portfolio-section {
+      #portfolio {
         background-image: url("https://41.media.tumblr.com/92e61775d4c3edcc5145936e3703d125/tumblr_nt5uo9fH9y1ud7rr3o1_1280.jpg");
       }
 
-      #contact-section {
+      #contact {
         background-image: url("https://41.media.tumblr.com/ac46aa24b44b5036e9200abb71f810d9/tumblr_nt5vzxV6Us1ud7rr3o1_1280.jpg");
+      }
+
+      footer {
+        height: 150px;
+        padding-top: 50px;
       }
     </style>
   </head>
@@ -63,16 +79,16 @@
           <div id="main-nav-collapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
               <li class="active">
-                <a href="#intro-section">Home</a>
+                <a href="#intro">Home</a>
               </li>
               <li>
-                <a href="#about-section">About</a>
+                <a href="#about">About</a>
               </li>
               <li>
-                <a href="#portfolio-section">Portfolio</a>
+                <a href="#portfolio">Portfolio</a>
               </li>
               <li>
-                <a href="#contact-section">Contact</a>
+                <a href="#contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -81,27 +97,46 @@
       </nav>
     </header>
 
-    <section id="intro-section" class="page-section">
+    <section id="intro" class="page-section">
       <div class="container text-center col-md-12">
           <h1 class="">mtendotnet</h1>
           <p class="lead">FreeCodeCamp Portfolio Front End Project</p>
-          <a href="http://twitter.com/mtendotnet" class="btn btn-default" target="_blank">Twitter</a>
-          <a href="http://github.com/mtendotnet" class="btn btn-default" target="_blank">Github</a>
-          <a href="https://uk.linkedin.com/in/masa255" class="btn btn-default" target="_blank">LinkedIn</a>
-          <a href="http://freecodecamp.com/mtendotnet" class="btn btn-default" target="_blank">FreeCodeCamp</a>
+          <a href="http://twitter.com/mtendotnet" class="btn btn-default btn-lg" target="_blank">
+            <i class="fa fa-twitter fa-fw"></i>
+            Twitter
+          </a>
+          <a href="http://github.com/mtendotnet" class="btn btn-default btn-lg" target="_blank">
+            <i class="fa fa-github fa-fw"></i>
+            Github
+          </a>
+          <a href="https://uk.linkedin.com/in/masa255" class="btn btn-default btn-lg" target="_blank">
+            <i class="fa fa-linkedin fa-fw"></i>
+            LinkedIn
+          </a>
+          <a href="http://freecodecamp.com/mtendotnet" class="btn btn-default btn-lg" target="_blank">
+            <i class="fa fa-fire fa-fw"></i>
+            FreeCodeCamp
+          </a>
       </div>
     </section>
 
-    <section id="about-section" class="page-section">
+    <section id="about" class="page-section">
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-lg-6">
             <h1>About</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-            text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-            survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised
-            in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
-            like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <article class="post-content">
+              <ul>
+                <li>Martin</li>
+                <li>Tanzanian (Dar-Es-Salaam)</li>
+                <li>London (via Nairobi &amp; Manchester)</li>
+                <li>Christian</li>
+                <li><a href="https://uk.linkedin.com/in/masa255" target="_blank">Web Developer</a></li>
+                <li>Rookie Traveller (<a href="http://www.interrail.eu/" target="_blank">Interrail</a> Jul - Aug 2015)</li>
+                <li>Sporty (Basketball &amp; Football)</li>
+                <li>Musician (dabble on the piano a little bit)</li>
+              </ul>
+            </article>
           </div>
           <div class="col-md-6 col-lg-6">
             <img src="http://placehold.it/350x350" class="img-responsive img-circle" alt="mtendotnet image">
@@ -110,7 +145,7 @@
       </div>
     </section>
 
-    <section id="portfolio-section" class="page-section">
+    <section id="portfolio" class="page-section">
       <div class="container">
         <h1>Portfolio</h1>
         <div class="row">
@@ -154,17 +189,37 @@
       </div>
     </section>
 
-    <section id="contact-section" class="page-section">
+    <section id="contact" class="page-section">
       <div class="container">
         <div class="row">
           <div class="col-md-9 col-lg-9">
             <h1>Connect with Martin</h1>
           </div>
           <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <p><a href="http://twitter.com/mtendotnet" class="btn btn-default" target="_blank">Twitter</a></p>
-            <p><a href="http://github.com/mtendotnet" class="btn btn-default" target="_blank">Github</a></p>
-            <p><a href="https://uk.linkedin.com/in/masa255" class="btn btn-default" target="_blank">LinkedIn</a></p>
-            <p><a href="http://freecodecamp.com/mtendotnet" class="btn btn-default" target="_blank">FreeCodeCamp</a></p>
+            <p>
+              <a href="http://twitter.com/mtendotnet" class="btn btn-default btn-lg" target="_blank">
+                <i class="fa fa-twitter fa-fw"></i>
+                Twitter
+              </a>
+            </p>
+            <p>
+              <a href="http://github.com/mtendotnet" class="btn btn-default btn-lg" target="_blank">
+                <i class="fa fa-github fa-fw"></i>
+                Github
+              </a>
+            </p>
+            <p>
+              <a href="https://uk.linkedin.com/in/masa255" class="btn btn-default btn-lg" target="_blank">
+                <i class="fa fa-linkedin fa-fw"></i>
+                LinkedIn
+              </a>
+            </p>
+            <p>
+              <a href="http://freecodecamp.com/mtendotnet" class="btn btn-default btn-lg" target="_blank">
+                <i class="fa fa-fire fa-fw"></i>
+                FreeCodeCamp
+              </a>
+            </p>
           </div>
         </div>
 
@@ -174,12 +229,12 @@
     <footer>
       <div class="container">
         <p>
-          <a href="#intro-section">Home</a> &middot;
-          <a href="#about-section">About</a> &middot;
-          <a href="#portfolio-section">Portfolio</a> &middot;
-          <a href="#contact-section">Contact</a>
+          <a href="#intro">Home</a> &middot;
+          <a href="#about">About</a> &middot;
+          <a href="#portfolio">Portfolio</a> &middot;
+          <a href="#contact">Contact</a>
         </p>
-        <p>&copy; Copyright @mtendotnet 2015. All Rights Reserved</p>
+        <p>&copy; Copyright @mtendotnet 2015+. All Rights Reserved</p>
       </div>
     </footer>
 
