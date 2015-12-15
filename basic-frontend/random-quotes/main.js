@@ -51,7 +51,7 @@
   var $author = $el.find('cite');
   var $button = $el.find('button#next-quote');
   var $tweetBtn = $el.find('a#tweet-quote');
-  var tweetIntentUrl = "https://twitter.com/intent/tweet?text=";
+  var tweetIntentUrl = 'https://twitter.com/intent/tweet?text=';
 
   $button.on('click', getNextQuote);
 
@@ -60,7 +60,7 @@
   function _render () {
     $quote.text(currentQuote.text);
     $author.text(currentQuote.author);
-    var tweetQuoteUrl = [tweetIntentUrl, currentQuote.text, ' - ', currentQuote.author];
+    var tweetQuoteUrl = [tweetIntentUrl, '"', currentQuote.text, '" - ', currentQuote.author];
     $tweetBtn.attr('href', tweetQuoteUrl.join('') );
   }
 
