@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>@mtendotnet - random quotes</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+
+  </head>
+  <body>
+
+    <div class="container text-center" data-ng-controller="PClockController as clock">
+
+      <h1>Pomodoro Clock</h1>
+
+      <section class="controls row">
+
+        <div class="break-timer-controls col-sm-6 pull-right">
+          <div class="input-group">
+            <buton class="btn btn-default input-group-addon"><i class="fa fa-minus"></i></buton>
+            <input type="text" class="form-control" aria-label="" size="3">
+            <buton class="btn btn-default input-group-addon"><i class="fa fa-plus"></i></buton>
+          </div>
+        </div>
+
+        <div class="session-timer-controls col-sm-6 pull-left">
+          <div class="input-group">
+            <buton class="btn btn-default input-group-addon"><i class="fa fa-minus"></i></buton>
+            <input type="text" class="form-control" aria-label="">
+            <buton class="btn btn-default input-group-addon"><i class="fa fa-plus"></i></buton>
+          </div>
+        </div>
+
+      </section>
+
+      <p>
+        &nbsp;
+      </p>
+
+      <section class="timer-display jumbotron">
+        <p class="h1">
+          <strong>{{ clock.model.sessionTimer | formatTime }}</strong>
+        </p>
+      </section>
+
+      <button class="btn btn-default btn-success" data-ng-click="clock.startTimer()">START</button>
+      <button class="btn btn-default btn-danger" data-ng-click="clock.stopTimer()">STOP</button>
+      <button class="btn btn-default btn-info" data-ng-click="clock.resetTimer()">RESET</button>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <script src="clock.js" charset="utf-8"></script>
+
+  </body>
+</html>
