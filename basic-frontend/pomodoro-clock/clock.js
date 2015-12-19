@@ -11,14 +11,16 @@
 
   function PClockController ($interval) {
 
-    var sessionLength = 25 * 60 + 1;
+    var sessionLength = 25 * 60;
     var breakLength = 5 * 60;
     var timer;
 
 
     var model = {
+      sessionLength: sessionLength,
+      breakLength: breakLength,
       sessionTimer: sessionLength,
-      breakTimer: displayTime(sessionLength)
+      breakTimer: breakLength
     };
 
     function displayTime (seconds) {
@@ -50,24 +52,25 @@
     }
 
     function resetTimer () {
+      stopTimer();
       model.sessionTimer = sessionLength;
       model.breakTimer = breakLength;
     }
 
     function increaseSessionLength () {
-      sessionLength++;
+      model.sessionLength++;
     }
 
     function decreaseSessionLength () {
-      sessionLength--;
+      model.sessionLength--;
     }
 
     function increaseBreakLength () {
-      breakLength++;
+      model.breakLength++;
     }
 
     function decreaseBreakLength () {
-      breakLength--;
+      model.breakLength--;
     }
 
     angular.extend(this, {

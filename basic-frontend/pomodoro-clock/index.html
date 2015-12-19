@@ -28,19 +28,28 @@
 
       <section class="controls row">
 
-        <div class="break-timer-controls col-sm-6 pull-right">
-          <div class="input-group">
-            <buton class="btn btn-default input-group-addon"><i class="fa fa-minus"></i></buton>
-            <input type="text" class="form-control" aria-label="" size="3">
-            <buton class="btn btn-default input-group-addon"><i class="fa fa-plus"></i></buton>
-          </div>
-        </div>
 
         <div class="session-timer-controls col-sm-6 pull-left">
           <div class="input-group">
-            <buton class="btn btn-default input-group-addon"><i class="fa fa-minus"></i></buton>
-            <input type="text" class="form-control" aria-label="">
-            <buton class="btn btn-default input-group-addon"><i class="fa fa-plus"></i></buton>
+            <buton class="btn btn-default input-group-addon" data-ng-click="clock.decreaseSessionLength()">
+              <i class="fa fa-minus"></i>
+            </buton>
+            <input type="text" class="form-control" aria-label="" value="{{clock.model.sessionLength | formatTime}}" />
+            <buton class="btn btn-default input-group-addon" data-ng-click="clock.increaseSessionLength()">
+              <i class="fa fa-plus"></i>
+            </buton>
+          </div>
+        </div>
+
+        <div class="break-timer-controls col-sm-6 pull-right">
+          <div class="input-group">
+            <buton class="btn btn-default input-group-addon" data-ng-click="clock.decreaseBreakLength()">
+              <i class="fa fa-minus"></i>
+            </buton>
+            <input type="text" class="form-control" aria-label="" value="{{clock.model.breakLength | formatTime}}" size="3">
+            <buton class="btn btn-default input-group-addon"  data-ng-click="clock.increaseBreakLength()">
+              <i class="fa fa-plus"></i>
+            </buton>
           </div>
         </div>
 
