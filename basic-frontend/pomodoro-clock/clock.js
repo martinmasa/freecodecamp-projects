@@ -23,15 +23,6 @@
       breakTimer: breakLength
     };
 
-    function displayTime (seconds) {
-      var m = Math.floor(seconds/60);
-      var s = seconds - (m * 60);
-      m = m < 10 ? '0' + m : m;
-      s = s < 10 ? '0' + s : s;
-
-      return [m, s].join(':');
-    }
-
     function startTimer () {
       if (timer) {
         return;
@@ -40,6 +31,11 @@
       timer = $interval(function () {
         if (model.sessionTimer > 0) {
           model.sessionTimer--;
+        } else if (model.breakTimer > 0) {
+          model.breakTimer--;
+        }
+        else {
+          resetTimer();
         }
       }, 1000);
     }
@@ -53,37 +49,41 @@
 
     function resetTimer () {
       stopTimer();
-      model.sessionTimer = sessionLength;
-      model.breakTimer = breakLength;
+      model.sessionTimer = model.sessionLength;
+      model.breakTimer = model.breakLength;
     }
 
     function increaseSessionLength () {
-      model.sessionLength++;
+      model.sessionLength += 60;
     }
 
     function decreaseSessionLength () {
-      model.sessionLength--;
+      model.sessionLength -= 60;
     }
 
     function increaseBreakLength () {
-      model.breakLength++;
+      model.breakLength += 60;
     }
 
     function decreaseBreakLength () {
-      model.breakLength--;
+      model.breakLength -=60;
     }
 
     angular.extend(this, {
       model: model,
       startTimer: startTimer,
       stopTimer: stopTimer,
-      resetTimer: resetTimer
+      resetTimer: resetTimer,
+      increaseSessionLength: increaseSessionLength,
+      decreaseSessionLength: decreaseSessionLength,
+      increaseBreakLength: increaseBreakLength,
+      decreaseBreakLength: decreaseBreakLength
     });
 
   }
 
   function formatTime () {
-    return function (timeInSeconds) {
+    return function (timeInSeconds, format) {
 
       if(isNaN(timeInSeconds)) {
         return;
@@ -93,6 +93,10 @@
       var s = timeInSeconds - (m * 60);
       m = m < 10 ? '0' + m : m;
       s = s < 10 ? '0' + s : s;
+
+      if (format && format.indexOf('s') < 0) {
+        return m;
+      }
 
       return [m, s].join(':');
 

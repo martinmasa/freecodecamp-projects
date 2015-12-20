@@ -34,7 +34,7 @@
             <buton class="btn btn-default input-group-addon" data-ng-click="clock.decreaseSessionLength()">
               <i class="fa fa-minus"></i>
             </buton>
-            <input type="text" class="form-control" aria-label="" value="{{clock.model.sessionLength | formatTime}}" />
+            <input type="text" class="form-control" aria-label="" value="{{clock.model.sessionLength | formatTime}}" disabled="true" />
             <buton class="btn btn-default input-group-addon" data-ng-click="clock.increaseSessionLength()">
               <i class="fa fa-plus"></i>
             </buton>
@@ -46,7 +46,7 @@
             <buton class="btn btn-default input-group-addon" data-ng-click="clock.decreaseBreakLength()">
               <i class="fa fa-minus"></i>
             </buton>
-            <input type="text" class="form-control" aria-label="" value="{{clock.model.breakLength | formatTime}}" size="3">
+            <input type="text" class="form-control" aria-label="" value="{{clock.model.breakLength | formatTime}}" disabled="true">
             <buton class="btn btn-default input-group-addon"  data-ng-click="clock.increaseBreakLength()">
               <i class="fa fa-plus"></i>
             </buton>
@@ -60,9 +60,12 @@
       </p>
 
       <section class="timer-display jumbotron">
-        <p class="h1">
-          <strong>{{ clock.model.sessionTimer | formatTime }}</strong>
-        </p>
+
+        <h1 title="Session Timer">
+          {{ clock.model.sessionTimer | formatTime }}
+          <small title="Break Timer">{{ clock.model.breakTimer | formatTime }}</small>
+        </h1>
+
       </section>
 
       <button class="btn btn-default btn-success" data-ng-click="clock.startTimer()">START</button>
