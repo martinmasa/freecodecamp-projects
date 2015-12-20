@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-ng-app="app">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,56 +22,59 @@
   </head>
   <body>
 
-    <div class="container text-center" data-ng-controller="PClockController as clock">
+    <div class="container text-center" data-ng-app="app">
 
-      <h1>Pomodoro Clock</h1>
+      <div data-ng-controller="PClockController as clock">
+        <h1>Pomodoro Clock</h1>
 
-      <section class="controls row">
+        <section class="controls row">
 
-
-        <div class="session-timer-controls col-sm-6 pull-left">
-          <div class="input-group">
-            <buton class="btn btn-default input-group-addon" data-ng-click="clock.decreaseSessionLength()">
-              <i class="fa fa-minus"></i>
-            </buton>
-            <input type="text" class="form-control" aria-label="" value="{{clock.model.sessionLength | formatTime}}" disabled="true" />
-            <buton class="btn btn-default input-group-addon" data-ng-click="clock.increaseSessionLength()">
-              <i class="fa fa-plus"></i>
-            </buton>
+          <div class="session-timer-controls col-sm-offset-4 col-sm-2">
+            <div class="input-group">
+              <buton class="btn btn-default input-group-addon" data-ng-click="clock.decreaseSessionLength()">
+                <i class="fa fa-minus"></i>
+              </buton>
+              <input type="text" class="form-control" aria-label="" value="{{clock.model.sessionLength | formatTime}}" disabled="true" />
+              <buton class="btn btn-default input-group-addon" data-ng-click="clock.increaseSessionLength()">
+                <i class="fa fa-plus"></i>
+              </buton>
+            </div>
           </div>
-        </div>
 
-        <div class="break-timer-controls col-sm-6 pull-right">
-          <div class="input-group">
-            <buton class="btn btn-default input-group-addon" data-ng-click="clock.decreaseBreakLength()">
-              <i class="fa fa-minus"></i>
-            </buton>
-            <input type="text" class="form-control" aria-label="" value="{{clock.model.breakLength | formatTime}}" disabled="true">
-            <buton class="btn btn-default input-group-addon"  data-ng-click="clock.increaseBreakLength()">
-              <i class="fa fa-plus"></i>
-            </buton>
+          <div class="break-timer-controls col-sm-2">
+            <div class="input-group">
+              <buton class="btn btn-default input-group-addon" data-ng-click="clock.decreaseBreakLength()">
+                <i class="fa fa-minus"></i>
+              </buton>
+              <input type="text" class="form-control" aria-label="" value="{{clock.model.breakLength | formatTime}}" disabled="true">
+              <buton class="btn btn-default input-group-addon"  data-ng-click="clock.increaseBreakLength()">
+                <i class="fa fa-plus"></i>
+              </buton>
+            </div>
           </div>
-        </div>
 
-      </section>
+        </section>
 
-      <p>
-        &nbsp;
-      </p>
+        <p>
+          &nbsp;
+        </p>
 
-      <section class="timer-display jumbotron">
+        <section class="timer-display jumbotron">
 
-        <h1 title="Session Timer">
-          {{ clock.model.sessionTimer | formatTime }}
-          <small title="Break Timer">{{ clock.model.breakTimer | formatTime }}</small>
-        </h1>
+          <h1 title="Session Timer">
+            {{ clock.model.sessionTimer | formatTime }}
+            <small title="Break Timer">{{ clock.model.breakTimer | formatTime }}</small>
+          </h1>
 
-      </section>
+        </section>
 
-      <button class="btn btn-default btn-success" data-ng-click="clock.startTimer()">START</button>
-      <button class="btn btn-default btn-danger" data-ng-click="clock.stopTimer()">STOP</button>
-      <button class="btn btn-default btn-info" data-ng-click="clock.resetTimer()">RESET</button>
+        <button class="btn btn-default btn-success" data-ng-click="clock.startTimer()">START</button>
+        <button class="btn btn-default btn-danger" data-ng-click="clock.stopTimer()">STOP</button>
+        <button class="btn btn-default btn-info" data-ng-click="clock.resetTimer()">RESET</button>
+      </div>
+
     </div>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
 
