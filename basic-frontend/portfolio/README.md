@@ -1,5 +1,5 @@
 ## Portfolio
-Create single page personal portfolio webpage. [Demo](http://codepen.io/mtendotnet/full/EPVRNL)
+[FreeCodeCamp](http://freecodecamp.com) single page personal portfolio webpage project. [Demo](http://codepen.io/mtendotnet/full/EPVRNL)
 
 #### User Stories
 - User should be able to access all of the portfolio webpage's content just by scrolling
