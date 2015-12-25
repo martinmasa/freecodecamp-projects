@@ -1,0 +1,28 @@
+
+div.calculator {
+  width: 229px;
+}
+
+input {
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  background-color: #ffffff;
+  text-align: right;
+}
+
+button.btn {
+  border-radius: 3px;
+  width: 54px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+button.btn.calc-zero {
+  width: 111px;
+}
+
+button.btn.calc-clear {
+  width: 170px;
+}

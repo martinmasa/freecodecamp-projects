@@ -22,7 +22,38 @@
   </head>
   <body>
 
-    
+    <div class="container">
+
+      <h1>FreeCodeCamp <span class="small">Calculator</span> </h1>
+
+      <div id="calculator-container" class="calculator">
+        <input class="calc-monitor" type="text" disabled="" /><br />
+          <!-- <button type="button" class="btn btn-danger calc-ac">AC</button> -->
+          <button type="button" class="btn btn-danger calc-clear">C</button>
+          <!-- <button type="button" class="btn btn-warning calc-op" data-calc-value="%">%</button> -->
+          <button type="button" class="btn btn-warning calc-op" data-calc-value="/">&divide;</button>
+          <br />
+          <button type="button" class="btn btn-default calc-number" data-calc-value="9">9</button>
+          <button type="button" class="btn btn-default calc-number" data-calc-value="8">8</button>
+          <button type="button" class="btn btn-default calc-number" data-calc-value="7">7</button>
+          <button type="button" class="btn btn-warning calc-op" data-calc-value="*">&times;</button>
+          <br />
+          <button type="button" class="btn btn-default calc-number" data-calc-value="6">6</button>
+          <button type="button" class="btn btn-default calc-number" data-calc-value="5">5</button>
+          <button type="button" class="btn btn-default calc-number" data-calc-value="4">4</button>
+          <button type="button" class="btn btn-warning calc-op" data-calc-value="-">-</button>
+          <br />
+          <button type="button" class="btn btn-default calc-number" data-calc-value="3">3</button>
+          <button type="button" class="btn btn-default calc-number" data-calc-value="2">2</button>
+          <button type="button" class="btn btn-default calc-number" data-calc-value="1">1</button>
+          <button type="button" class="btn btn-warning calc-op" data-calc-value="+">+</button>
+          <br />
+          <button type="button" class="btn btn-default calc-number calc-zero" data-calc-value="0">0</button>
+          <button type="button" class="btn btn-default calc-number" data-calc-value=".">.</button>
+          <button type="button" class="btn btn-success evaluate">=</button>
+      </div>
+
+    </div>
 
 
 
@@ -30,7 +61,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
 
     <script src="calculator.js" charset="utf-8"></script>
   </body>
